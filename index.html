@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Directions with Options - Bing Maps Samples</title>
+    <link href="styles/StyleSheet.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body onload="GetMap()">
+    <div class="container">
+        <div class="dropdown">
+            <h1>POI</h1>
+            
+            <button>POI</button>
+            <div class="content">
+              
+                <select name="poiOptions" id="poiDropdown">
+                    <option value="">Select a list of locations</option>
+                    <option value="8211">School</option>
+                    <option value="6000">Bank</option>
+                    <option value="5800">Restuarants</option>
+                </select>
+
+            </div>
+            <div class="direction" id='directionsItinerary'></div>
+
+        </div>
+
+        <div class="item item-2" id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;background-color:gray">2</div>
+        <div class="item item-3" id="results">Results</div>        
+        <div class="slidecontainer">
+            <input type="range" min="1" max="25" value="10" class="slider" id="myRange">
+            <p>Miles: <span id="demo"></span></p>
+        </div>
+    </div>
+    <!--<div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;background-color:gray"></div>-->
+    
+    <!--<fieldset style="width:800px;margin-top:10px;">
+        <legend>Direction - With Options Sample</legend>
+        When calculating directions request options can be used to modify how the route is calculated.
+        Render options can be used to customize how the route is displayed on the map.
+        In this example dirving directions are calculated in kilometers and set to avoid highways.
+        The route line is rendered green and thick, while the title of all waypoints are replaced with an empty string to hide the default behaviour.
+    </fieldset>-->
+    <!-- CONNECT TO MAPPING API-->
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=Am_55J7TQBZ8GZRLhg-obr5nh0awrX-MpDUDvXY2UV1jHIaNnwdCtewEZR4IBat3'></script>
+
+    <!-- LINK LOCAL JAVASCRIPT-->
+    <script type="text/javascript" src="scripts/main1.js"></script>
+</body>
+
+</html>
